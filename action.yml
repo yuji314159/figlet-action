@@ -1,0 +1,26 @@
+name: figlet-action
+description: figlet command on github actions
+
+inputs:
+  text:
+    description: A string of text to turn into ASCII Art.
+    required: true
+  font:
+    description: A string value that indicates the FIGlet font to use.
+    default: Standard
+  horizontal-layout:
+    description: A string value that indicates the horizontal layout to use.
+    default: default
+  vertical-layout:
+    description: A string value that indicates the vertical layout to use.
+    default: default
+  width:
+    description: This option allows you to limit the width of the output.
+    default: 'undefined'
+  whitespace-break:
+    description: This option works in conjunction with "width".
+    default: 'false'
+
+runs:
+  using: node20
+  main: index.js
